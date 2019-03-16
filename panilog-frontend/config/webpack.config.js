@@ -447,6 +447,21 @@ module.exports = function(webpackEnv) {
             },
             // Adds support for CSS Modules, but using SASS
             // using the extension .module.scss or .module.sass
+            
+            //기존코드
+            // {
+            //   test: sassModuleRegex,
+            //   use: getStyleLoaders(
+            //     {
+            //       importLoaders: 2,
+            //       sourceMap: isEnvProduction && shouldUseSourceMap,
+            //       modules: true,
+            //       getL드ocalIdent: getCSSModuleLocalIdent,
+            //     },
+            //     'sass-loader'
+            //   ),
+            // },
+
             {
               test: sassModuleRegex,
               use: getStyleLoaders(
@@ -455,9 +470,13 @@ module.exports = function(webpackEnv) {
                   sourceMap: isEnvProduction && shouldUseSourceMap,
                   modules: true,
                   getLocalIdent: getCSSModuleLocalIdent,
-                },
-                'sass-loader'
-              ),
+                }).concat({
+                  loader: require.resolve('sass-loader'),
+                  options: {
+                    includePaths: [paths.appSrc + '/styles'],
+                    sourceMap: isEnvProduction && shouldUseSourceMap
+                  }
+                }),
             },
             // "file" loader makes sure those assets get served by WebpackDevServer.
             // When you `import` an asset, you get its (virtual) filename.
