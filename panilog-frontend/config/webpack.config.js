@@ -421,16 +421,24 @@ module.exports = function(webpackEnv) {
             // Opt-in support for SASS (using .scss or .sass extensions).
             // By default we support SASS Modules with the
             // extensions .module.scss or .module.sass
+
+            //여기부분중요
+            //리액트버젼이바끼면서 커스터마이징하는방식이바뀌었기에 수정해줘야함
+            //수정하면 내사 사용할 loader을 options와 함께 적용해줌
+            //이러면 상대경로 입력할필요없이 styles 디렉토리 기준  절대경로로 불러올수있음
             {
               test: sassRegex,
               exclude: sassModuleRegex,
-              use: getStyleLoaders(
-                {
-                  importLoaders: 2,
-                  sourceMap: isEnvProduction && shouldUseSourceMap,
-                },
-                'sass-loader'
-              ),
+              use: getStyleLoaders({
+                importLoaders: 2,
+                sourceMap: isEnvProduction && shouldUseSourceMap
+              }).concat({
+                loader: require.resolve('sass-loader'),
+                options: {
+                  includePaths: [paths.appSrc + '/styles'],
+                  sourceMap: isEnvProduction && shouldUseSourceMap
+                }
+              }),
               // Don't consider CSS imports dead code even if the
               // containing package claims to have no side effects.
               // Remove this when webpack adds a warning or an error for this.
