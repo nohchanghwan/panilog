@@ -1,0 +1,29 @@
+@import 'utils';
+
+.editor-template {
+  .panes {
+    height: calc(100vh - 4rem); // 페이지 높이에서 EditorHeader 크기 빼기
+    display: flex;
+    background: $oc-gray-1; // separator의 위치 설정을 위하여 relative로 설정
+    .pane {
+      display: flex;
+      flex:1;
+    }
+   .separator {
+    width: 1rem; // 클릭 영역을 넓게 설정하기 위함입니다.
+    height: 100%;
+    position: absolute;
+    transform: translate(-50%); // 자신의 50%만큼 왼쪽으로 이동
+    cursor: col-resize; // 리사이즈 커서
+    background: black;
+    }
+    @include media("<medium"){
+        .editor {
+            flex: 1!important;
+        }
+        .preview, .separator{
+            display: none;
+        }
+    }
+  }
+}
