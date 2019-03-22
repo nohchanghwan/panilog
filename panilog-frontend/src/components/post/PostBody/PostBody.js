@@ -8,7 +8,7 @@ const PostBody = () => (
   <div className={cx('post-body')}>
     <div className={cx('paper')}>
       내용
-    </div>    
+    </div>
   </div>
 );
 

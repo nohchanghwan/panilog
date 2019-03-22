@@ -14,13 +14,31 @@
   
   // default: 파란색 버튼
   &.default {
-    background: $oc-indigo-3;
+    background: $oc-gray-9;
     &:hover {
-      background: $oc-indigo-4;
+      background: white;
+      color: $oc-gray-9;
     }
     &:active {
-      background: $oc-indigo-3;
+      background: white;
+      color: $oc-gray-9;
     }
+  }
+
+
+  // custom1
+  &.custom {
+    background: white;
+    color: $oc-gray-9;
+    @include material-shadow(2, 0.5);
+    &:hover {
+      background: $oc-gray-9;
+      color: white;
+    }
+    &:active {
+      background: $oc-gray-9;
+      color: white;
+      }
   }
 
   // gray: 회색 버튼
@@ -40,7 +58,7 @@
     border-radius: 2px;
     &:hover {
       background: white;
-      color: $oc-indigo-4;
+      color: black;
     }
     &:active {
       background: rgba(255,255,255, 0.85);

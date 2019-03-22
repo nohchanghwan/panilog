@@ -1,7 +1,7 @@
 @import 'utils';
 
 .post-info {
-  background: $oc-indigo-4;
+  background: white;
   height: 24rem;
   display: flex;
   align-items: center;
@@ -10,7 +10,7 @@
     margin-top: -5rem; // 헤더 크기만큼 위로
     width: 1024px;
     padding: 1rem;
-    color: white;
+    color: black;
     h1 {
       font-weight: 300;
       font-size: 3rem;

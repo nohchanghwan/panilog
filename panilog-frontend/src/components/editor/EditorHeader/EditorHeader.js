@@ -5,14 +5,14 @@ import Button from 'components/common/Button';
 
 const cx = classNames.bind(styles);
 
-const EditorHeader = ({onGoBack, onSummit}) => {
+const EditorHeader = ({onGoBack, onSubmit}) => {
   return (
     <div className={cx('editor-header')}>
-      <div className={cx('back')}>  
-        <Button onClick={onGoBack} theme="outline">뒤로가기</Button>
+      <div className={cx('back')}>
+        <Button theme="custom"  to="/" onClick={onGoBack} >뒤로가기</Button>
       </div>
-      <div className={cx('submit')}>  
-        <Button onClick={onSummit} theme="outline">작성하기</Button>
+      <div className={cx('submit')}>
+        <Button theme="custom" onClick={onSubmit} >작성하기</Button>
       </div>
     </div>
   );

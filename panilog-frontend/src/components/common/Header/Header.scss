@@ -1,7 +1,9 @@
 @import 'utils';
 
 .header {
-  background: $oc-indigo-4;
+  background: white;
+  position: fixed;
+  width: 100%;
   .header-content {
     height: 5rem;
     width: 1400px;
@@ -24,7 +26,7 @@
 
     .brand {
       // 로고
-      color: white;
+      color: $oc-gray-9;
       font-size: 1.5rem;
       font-weight: 600;
     }
@@ -34,4 +36,5 @@
       margin-left: auto;
     }
   }
+  
 }

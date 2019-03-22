@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom';
 const cx = classNames.bind(styles);
 
 const PostItem = () => {
-  return(
+  return (
     <div className={cx('post-item')}>
-      <h2><a>타이틀</a></h2>
-      <div className={cx('date')}>2019-03-17</div>
+      <h2><a>이글은 첫번째 포스트입니다</a></h2>
+      <div className={cx('date')}>2017-10-24</div>
       <p>내용</p>
       <div className={cx('tags')}>
         <a>#태그</a>
@@ -19,9 +19,11 @@ const PostItem = () => {
     </div>
   )
 }
-
 const PostList = () => (
   <div className={cx('post-list')}>
+    <PostItem/>
+    <PostItem/>
+    <PostItem/>
     <PostItem/>
     <PostItem/>
     <PostItem/>

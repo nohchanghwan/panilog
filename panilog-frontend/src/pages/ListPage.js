@@ -5,15 +5,14 @@ import PostList from 'components/list/PostList';
 import Pagination from 'components/list/Pagination';
 
 const ListPage = () => {
-    return(
-        <PageTemplate>
-           <ListWrapper>
-               <PostList/>
-               <Pagination/>
-           </ListWrapper>
-        </PageTemplate>
-        
-    );
+  return (
+    <PageTemplate>
+      <ListWrapper>
+        <PostList/>
+        <Pagination/>
+      </ListWrapper>
+    </PageTemplate>
+  );
 };
 
 export default ListPage;

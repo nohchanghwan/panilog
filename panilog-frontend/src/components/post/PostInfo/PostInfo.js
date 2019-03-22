@@ -11,7 +11,7 @@ const PostInfo = () => (
       <div className={cx('tags')}>
         <a>#태그</a> <a>#태그</a> <a>#태그</a>
       </div>
-      <div className={cx('date')}>Mar 18, 2019</div>
+      <div className={cx('date')}>Oct 29, 2017</div>
     </div>
   </div>
 );

@@ -13,7 +13,7 @@ const Header = () => (
         <Link to="/">Panilog</Link>
       </div>
       <div className={cx('right')}>
-        <Button theme="outline" to="editor"> 새 포스트</Button>
+        <Button theme="custom" to="/editor">새 포스트</Button>
       </div>
     </div>
   </header>
