@@ -6,21 +6,24 @@ var { autoIncrement } = require('mongoose-plugin-autoinc');
 
 //생성될 필드명을 정한다.
 var PostsSchema = new Schema({
-    //기존
-    // name :String,
-    
+
     //추가 + 모델에서 벨리데이션체크를 실시한다 -> 제목을 입력해주세요
-    subject : {
+    title : {
         type : String, //제품명
         required : [ true, '제목은 입력해주세요']
     },
-    thumbnail : String, //이미지 파일명 [이미지파일업로드]
-    description : String, //설명
+    //thumbnail : String, //이미지 파일명 [이미지파일업로드]
+    body : {
+        type : String //내용
+    },
+    tags : {
+        type : [String] // 문자열 + 배열
+    },
     created_at : { //작성일
         type : Date,
         default : Date.now()
-    },
-    username : String // 작성자추가(7차시)
+    }
+    //username : String // 작성자추가(7차시)
 });
 
 

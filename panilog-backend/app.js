@@ -17,14 +17,15 @@ db.on('error', console.error);
 db.once('open', function(){
     console.log('mongodb connect');
 });
-mongoose.connect('mongodb://127.0.0.1:27017/panilog');
+mongoose.connect('mongodb://127.0.0.1:27017/panilog',{useNewUrlParser:true});
 mongoose.set('useCreateIndex', true);
+
 //============================================▲요위에 데이터베이스이름
 
 
 
 
-var admin = require('./api/admin');
+var admin    = require('./routes/admin');
 
 
 
