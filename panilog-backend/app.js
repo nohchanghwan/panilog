@@ -7,6 +7,7 @@ var cookieParser = require('cookie-parser');
 var app = express();
 var port = 4000;
 
+
 //MongoDB 커넥션================================
 var mongoose = require('mongoose');
     //mongoose내장 프로미스가 문제가있어서 global 로 바꿔준다
@@ -19,12 +20,11 @@ db.once('open', function(){
 });
 mongoose.connect('mongodb://127.0.0.1:27017/panilog',{useNewUrlParser:true});
 mongoose.set('useCreateIndex', true);
-
 //============================================▲요위에 데이터베이스이름
 
 
 
-
+//라우팅 
 var admin    = require('./routes/admin');
 
 
@@ -39,11 +39,9 @@ app.use(cookieParser());
 
 
 //Routing=====================================
-app.use('/admin', admin );
+app.use('/', admin );
 
-app.get('/', function(req,res){
-     res.send('first app');
-});
+
 
 app.listen( port, function(){
      console.log('Express listening on port', port);

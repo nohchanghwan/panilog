@@ -6,11 +6,15 @@
 @import url("//fonts.googleapis.com/css?family=Gugi"); /*Gugi*/
 @import url("//cdn.jsdelivr.net/gh/velopert/font-d2coding@1.2.1/d2coding.css");
 @import url("//fonts.googleapis.com/css?family=Ubuntu");  /*'Ubuntu', sans-serif; */
+//글씨체 눈누 웹폰트
+@font-face { font-family: 'silgothic'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/silgothic.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'NIXGONM-Vb'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/NIXGONM-Vb.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'BMHANNAAir'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.0/BMHANNAAir.woff') format('woff'); font-weight: normal; font-style: normal; }
 
 body {
   margin: 0;
   box-sizing: border-box;
-  font-family: "Do Hyeon", sans-serif;
+  font-family: 'NIXGONM-Vb', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

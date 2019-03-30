@@ -4,8 +4,11 @@
   background: white;
   position: fixed;
   width: 100%;
+  border-bottom-style : solid;
+  border-bottom-width : 0.1px;
+  border-bottom-color : #f1f3f5;
   .header-content {
-    height: 5rem;
+    height: 4rem;
     width: 1400px;
     margin: 0 auto; // 중앙 정렬
     padding-left: 3rem;
