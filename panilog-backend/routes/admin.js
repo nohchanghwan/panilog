@@ -26,10 +26,11 @@ router.post('/posts/write', function(req,res){
         res.send(validationError);
     }else{
         post.save(function(err){
-            res.redirect('/');
+            //res.redirect('/');
+            res.json(post);
         });
     }
-    console.log(req.body);
+    console.log(req.body);  
 });
 
 
@@ -57,7 +58,6 @@ router.get('/posts/detail/:id' , function(req, res){
         //     res.render('admin/productsDetail', { product: product , comments : comments });
         // });
         res.send(posts);
-        console.log(posts);
     });
 });
 

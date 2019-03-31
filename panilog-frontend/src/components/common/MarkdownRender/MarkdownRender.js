@@ -40,14 +40,14 @@ class MarkdownRender extends Component {
   constructor(props) {
     super(props);
     const { markdown } = props;
-    // 서버사이드 렌더링에서도 마크다운 처리가 되도록 constructor 쪽에서도 구현합니다.
+    // 서버사이드 렌더링에서도 마크다운 처리가 되도록 constructor 쪽에서도 구현
     this.state = {
       html: markdown ? marked(props.markdown, { breaks: true, sanitize: true }) : ''
     }
   }
 
   componentDidUpdate(prevProps, prevState) {
-    // markdown 값이 변경되면 renderMarkdown을 호출합니다.
+    // markdown 값이 변경되면 renderMarkdown을 호출
     if(prevProps.markdown !== this.props.markdown) {
       this.renderMarkdown();
     }
@@ -57,17 +57,22 @@ class MarkdownRender extends Component {
     }
   }
 
-  
+  //페이지 이동했다가 뒤로가기해도 다시 프리즘하이라이팅됨(기존에는 하이라이팅 사라지는문제)
+  componentDidMount(){
+    Prism.highlightAll();
+  }
+
+
   render() {
     const { html } = this.state;
 
     // React 에서 html 을 렌더링 하려면 객체를 만들어서 내부에
-    // __html 값을 설정해야합니다.
+    // __html 값을 설정
     const markup = {
       __html: html
     };
 
-    // 그리고, dangerouslySetInnerHTML 값에 해당 객체를 넣어주면 됩니다.
+    // 그리고, dangerouslySetInnerHTML 값에 해당 객체를 넣기어주기
     return (
       <div className={cx('markdown-render')} dangerouslySetInnerHTML={markup}/>
     );

@@ -28,7 +28,7 @@ class EditorHeaderContaioner extends Component {
         };
         try{
             await EditorActions.writePost(post);
-            history.push('/post/${this.props.postId}');
+            history.push(`/post/${this.props.postId}`);
         } catch(e){
             console.log(e);
         }
