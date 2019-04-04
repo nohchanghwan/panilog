@@ -10,7 +10,7 @@ const PostBody = ({body}) => (
   <div className={cx('post-body')}>
     <div className={cx('paper')}>
       <MarkdownRender markdown={body}/>
-    </div>
+    </div>                        
   </div>
 );
 

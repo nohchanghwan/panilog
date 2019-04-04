@@ -32,6 +32,7 @@ module.exports = {
   // These are the "entry points" to our application.
   // This means they will be the "root" imports that are included in JS bundle.
   // The first two entry points enable "hot" CSS and auto-refreshes for JS.
+  
   entry: [
     // We ship a few polyfills by default:
     require.resolve('./polyfills'),
@@ -293,6 +294,7 @@ module.exports = {
     tls: 'empty',
     child_process: 'empty',
   },
+ 
   // Turn off performance hints during development because we don't do any
   // splitting or minification in interest of speed. These warnings become
   // cumbersome.
