@@ -28,12 +28,12 @@ class Post extends Component {
     
     if(loading) return null; // 로딩 중일 때는 아무것도 보여주지 않음
 
-    const { title, body, tags } = post.toJS();
+    const { title, body, tags, id } = post.toJS();
 
     return (
       <div>
         <PostInfo title={title} tags={tags}/>
-        <PostBody body={body}/>
+        <PostBody body={body} id={id}/>
       </div>
     )
   }

@@ -3,6 +3,13 @@ import styles from './PostList.scss';
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 
+//폰트어썸추가
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTags } from '@fortawesome/free-solid-svg-icons'
+library.add(faTags)
+
+
 const cx = classNames.bind(styles);
 
 const PostItem = () => {
@@ -12,6 +19,7 @@ const PostItem = () => {
       <div className={cx('date')}>2017-10-24</div>
       <p>내용</p>
       <div className={cx('tags')}>
+        <FontAwesomeIcon icon={'tags'} color='#2B1B17'/> 
         <a>#태그</a>
         <a>#태그</a>
         <a>#태그</a>

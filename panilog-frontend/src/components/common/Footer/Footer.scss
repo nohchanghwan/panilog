@@ -1,18 +1,18 @@
 @import 'utils';
 
 .footer {
-  background: $oc-gray-7;
+  background: $oc-gray-1;
   height: 10rem;
-  
   // 내부 내용 중앙 정렬
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column; // 위에서 아래로
-
+  display: flex;
+  align-items: center;
   .brand {
     // 로고
-    color: white;
+    color: $oc-gray-8;
     font-size: 2rem;
     font-weight: 600;
   }
@@ -22,10 +22,49 @@
     margin-top: 0.5rem;
     font-weight: 600;
     font-size: 0.8rem;
-    color: rgba(255,255,255,0.8);
+    color: $oc-gray-8;
     cursor: pointer; // 손가락 모양 커서
     &:hover { // 마우스 호버 시 불투명도 없애기
       color: white;
     }
   }
+  .copyright {
+    // 카피라이트 버튼
+    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 0.6rem;
+    color: $oc-gray-8;
+    cursor: pointer; // 손가락 모양 커서
+    &:hover { // 마우스 호버 시 불투명도 없애기
+      color: white;
+    }
+  }
+
+  .icon {
+    // 카피라이트 버튼
+    font-weight: 600;
+    float:left;
+    font-size: 1rem;
+    color: $oc-gray-8;
+    cursor: pointer; // 손가락 모양 커서
+
+    &:hover { // 마우스 호버 시 불투명도 없애기
+      color: $oc-blue-6;
+    }
+  }
+  .icon2 {
+    // 카피라이트 버튼
+    font-weight: 600;
+    float:left;
+    font-size: 1rem;
+    color: $oc-gray-8;
+    cursor: pointer; // 손가락 모양 커서
+
+    &:hover { // 마우스 호버 시 불투명도 없애기
+      color: $oc-grape-7;
+    }
+  }
+  .inline {
+  }
+
 }

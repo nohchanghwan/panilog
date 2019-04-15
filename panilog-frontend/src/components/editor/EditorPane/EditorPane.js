@@ -21,7 +21,7 @@ class EditorPane extends Component {
 
   editor = null // 에디터 ref
   codeMirror = null // CodeMirror 인스턴스
-  cursor = null // 에디터의 텍스트 cursor 위치
+  cursor = {line: 1, ch: 5}; // 에디터의 텍스트 cursor 위치
   
   initializeEditor = () => {
     this.codeMirror = CodeMirror(this.editor, {

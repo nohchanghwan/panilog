@@ -1,5 +1,6 @@
 @import 'utils';
 
+
 .post-info {
   background: white;
   height: 24rem;
@@ -32,7 +33,7 @@
     }
     .date {
       text-align: right;
-      //opacity: 0.75;
+      opacity: 0.75;
       font-style: italic;
       font-size: 1.25rem;
     }
@@ -53,6 +54,10 @@
     height: auto;
     padding-bottom: 4rem;
     .info {
+      h1 { 
+        font-size: 1.5rem;
+      }
+      //제목크기로인해 깨짐현상 수정 -> 사이즈 1.5rem
       padding-top: 0;
       margin: 0;
       .tags {
