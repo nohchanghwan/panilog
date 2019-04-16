@@ -36,6 +36,7 @@ router.post('/posts/write', function(req,res){
 
 //PostList
 router.get('/', function(req,res){
+    var page = parseInt(req.query.page || 1,10);
     PostsModel.find({}, function(err,posts){
         //아래는 화면 렌더링을 해주는것, 나는 리액트로보낼거니까 해당없음
         // res.render( 'admin/posts' , { 
@@ -44,9 +45,24 @@ router.get('/', function(req,res){
         if(err) throw err;
         res.send(posts);
         console.log(posts);
-    });
+    }).sort({id:-1})
+      .limit(10)
+      .skip((page - 1) * 10)
+      .exec();
 });
 
+// PostList
+// router.get('/', function(req,res){
+//     PostsModel.find({}, function(err,posts){
+//         //아래는 화면 렌더링을 해주는것, 나는 리액트로보낼거니까 해당없음
+//         // res.render( 'admin/posts' , { 
+//         //     "posts" : posts
+//         // });
+//         if(err) throw err;
+//         res.send(posts);
+//         console.log(posts);
+//     }).sort({id:-1}).limit(10);
+// });
 
 //PostRead
 router.get('/posts/detail/:id' , function(req, res){
