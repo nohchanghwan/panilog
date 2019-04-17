@@ -17,4 +17,18 @@
     @include media("<large") { width: 768px; }
     @include media("<medium") { width: calc(100% - 2rem); }
   }
+
+  .comment {
+    padding: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+    background:white;
+    margin: 0 auto;
+    min-height: 20rem;
+
+    // 해상도에 따라 다른 width를 설정합니다.
+    width: 1024px;
+    @include media("<large") { width: 768px; }
+    @include media("<medium") { width: calc(100%); }
+  }
 }

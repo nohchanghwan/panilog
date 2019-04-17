@@ -9,8 +9,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTags } from '@fortawesome/free-solid-svg-icons'
 library.add(faTags)
 
+//List화면 데이터렌더링
+// import moment from 'moment';
+// import removeMd from 'remove-markdown';
 
 const cx = classNames.bind(styles);
+// 데이터
+// title 
+// body 
+// tags 
+// created_at 
 
 const PostItem = () => {
   return (
@@ -40,3 +48,5 @@ const PostList = () => (
 );
 
 export default PostList;
+
+

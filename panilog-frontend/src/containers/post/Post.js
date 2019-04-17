@@ -29,7 +29,7 @@ class Post extends Component {
     if(loading) return null; // 로딩 중일 때는 아무것도 보여주지 않음
 
     const { title, body, tags, id } = post.toJS();
-
+    //디스커스에 넘겨주기위해 id 변수 추가 -> Body로 넘겨줌
     return (
       <div>
         <PostInfo title={title} tags={tags}/>
