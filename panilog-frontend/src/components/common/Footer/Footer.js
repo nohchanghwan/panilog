@@ -22,7 +22,7 @@ const Footer = () => (
           <FontAwesomeIcon icon={['fab', 'slack']} spin/> 센터 슬랙       
         </div>
       </il>
-    <Link to="/" className={cx('brand')}>Panilog</Link>
+    <Link to="/" className={cx('brand')}>tech.blog</Link>
     <div className={cx('admin-login')}>관리자 로그인</div>
     <div className={cx('admin-login')}>Copyright ©KB Corp. All Rights Reserved.</div>
 

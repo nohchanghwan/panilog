@@ -26,16 +26,17 @@ class ListContainer extends Component {
     //페이지값이 변하면 리스트를 새로불러오도록
     componentDidUpdate(prevProps, prevState){
         if(prevProps.page !== this.props.page || prevProps.tag !== this.props.tag) {
+            this.getPostList();
             //만약 이전상태와값들과 지금상태값이다르다면
             document.documentElement.scrollTop = 0;
             // 화면맨위로
         }
     }
-    
-    
+
     render() {
       const { loading, tag, posts, page, lastPage } = this.props;
       if(loading) return null;
+      
       return(
           <div>
               <PostList posts={posts}/>
@@ -48,7 +49,7 @@ class ListContainer extends Component {
   
   export default connect(
     (state) => ({
-      lastPage: state.list.get('latePage'),
+      lastPage: state.list.get('lastPage'),
       posts: state.list.get('posts'),
       loading: state.pender.pending['list/GET_POST_LIST']
     }),

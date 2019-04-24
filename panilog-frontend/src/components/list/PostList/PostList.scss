@@ -1,17 +1,25 @@
 @import 'utils';
 
 .post-list {
+  
   .post-item {
-    padding: 1.5rem;
+    padding: 0.5rem;
     transition: all .15s ease-in;
+    word-wrap: break-word; // 내용이 너무 길면 다음 줄에 작성
+
     h2 {
+      //margin-top:0.5rem;
       font-size: 2rem;
       font-weight: 400;
-      margin: 0;
       color: $oc-gray-8;
+      
+      
       a {
         transition: all .15s ease-in; // 스타일 바뀔 때 애니메이션 효과
         border-bottom: 1px solid transparent;
+        // word-wrap: break-word; // 내용이 너무 길면 다음 줄에 작성
+
+        
       }
       a:hover {
         color: $oc-blue-6;
@@ -28,7 +36,7 @@
       color: $oc-gray-7;
     }
     .tags {
-      font-size: 0.85rem;
+      font-size: 1rem;
       color: $oc-blue-6;
       a {
         &:hover {
@@ -40,12 +48,27 @@
         margin-left: 0.25rem;
       }
     }
+
+
     &:hover {
       // 호버 시 배경색 변경
       background: rgba($oc-indigo-7, 0.05);
     }
+
+
   }
   .post-item + .post-item { // 아이템 사이 여백
     border-top: 1px solid $oc-gray-3;
+  }
+
+
+  @include media("<medium") {
+
+    .post-item {
+      h2 { 
+        font-size: 1.7rem;
+      }
+
+    }
   }
 }

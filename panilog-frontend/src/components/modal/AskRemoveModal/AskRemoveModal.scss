@@ -1,0 +1,23 @@
+
+@import 'utils';
+
+.question {
+  background: white;
+  padding: 2.5rem;
+  .title {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  .description {
+    margin-top: 0.25rem;
+    
+  }
+}
+
+.options {
+  padding: 0.5rem;
+  background: white;
+  text-align: center;
+}
+
+

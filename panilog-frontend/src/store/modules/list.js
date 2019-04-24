@@ -2,6 +2,7 @@ import { createAction, handleActions } from 'redux-actions';
 
 import { Map, List, fromJS } from 'immutable';
 import { pender } from 'redux-pender';
+
 import * as api from 'lib/api';
 
 // action types
@@ -21,7 +22,7 @@ export default handleActions({
     //다수의 데이터를받아와 각각매핑할때 pender사용 
     ...pender({
        type: GET_POST_LIST,
-      onSuccess: (state, action) => {
+       onSuccess: (state, action) => {
         const { data: posts } = action.payload;
         const lastPage = action.payload.headers['last-page'];
 

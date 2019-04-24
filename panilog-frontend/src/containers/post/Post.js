@@ -18,7 +18,7 @@ class Post extends Component {
       console.log(e);
     }
   }
-
+  
   componentDidMount() {
     this.initialize();
   }
