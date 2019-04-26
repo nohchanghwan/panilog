@@ -27,6 +27,7 @@ const PostItem = ({title, body, created_at, tags, id}) => {
   const tagList = tags.map(
     tag => 
       <Link key={tag} to={`/tag/${tag}`}>#{tag}</Link>
+
   );
   
   return (
@@ -35,7 +36,7 @@ const PostItem = ({title, body, created_at, tags, id}) => {
       <div className={cx('date')}>{moment(created_at).format('ll')}</div>
       <p>{removeMd(body)}</p>
       <div className={cx('tags')}>
-        <FontAwesomeIcon icon={'tags'} color='#2B1B17'/>&nbsp;        
+        <FontAwesomeIcon icon={'tags'} />&nbsp;        
         {tagList}
       </div>
     </div>

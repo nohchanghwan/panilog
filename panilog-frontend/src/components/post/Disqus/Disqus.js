@@ -19,8 +19,7 @@ class DisqusComponent extends React.Component {
         return (
             <div className="article">
                 
-                <Disqus.CommentCount shortname={disqusShortname} config={disqusConfig}>
-                </Disqus.CommentCount> 개의 댓글이 달렸습니다           
+        
                 <Disqus.DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
             </div>
         );

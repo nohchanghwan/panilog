@@ -4,6 +4,7 @@ import Pagination from 'components/list/Pagination';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as listActions from 'store/modules/list';
+import TagComponent from 'components/list/TagComponent';
 
 class ListContainer extends Component {
     //api 호출하고 데이터를 PostList 와 Pagination에 넣어줌
@@ -39,6 +40,7 @@ class ListContainer extends Component {
       
       return(
           <div>
+              <TagComponent tag={tag}/>
               <PostList posts={posts}/>
               <Pagination page={page} lastPage={lastPage} tag={tag} />
           </div>
