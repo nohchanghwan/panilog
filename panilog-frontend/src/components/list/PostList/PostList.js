@@ -15,6 +15,7 @@ import { faTags } from '@fortawesome/free-solid-svg-icons'
 library.add(faTags)
 
 
+
 const cx = classNames.bind(styles);
 // 데이터
 // title 

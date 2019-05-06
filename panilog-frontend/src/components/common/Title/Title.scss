@@ -1,0 +1,101 @@
+
+@import 'utils';
+.com{
+
+    height: 5rem;
+    // background-color: aquamarine;
+    .title {
+        color:white;
+        position: absolute;
+        width: 75px;
+        height: 60px;
+        left: 24px;
+        top: 24px;
+        font-size: 1.5rem;
+    }
+
+    @media all and (min-width:750px) {
+        /* Position and sizing of burger button */
+            .title {
+                position: absolute;
+                width: 300px;
+                height: 60px;
+                left: 36px;
+                top: 36px;
+                font-size: 2rem;
+            }
+            .design {
+                font-family: 'BMHANNAPro';
+                text-align: center;
+                font-size: 3rem;
+                padding-top:12rem;
+                color:white;
+                word-wrap: break-word;
+                 .tag{
+
+                    padding-top:3rem;
+                    font-size: 7rem;
+                
+                 }
+            }
+        }
+        @media all and (max-width:750px) {
+      
+            .title {
+                position: absolute;
+                width: 60px;
+                height: 60px;
+                left: 24px;
+                top: 24px;
+                font-size: 1.5rem;
+            }
+            .design {
+                font-family: 'BMHANNAPro';
+                text-align: center;
+                padding-top:12rem;
+                font-size: 2rem;
+                color:white;
+                word-wrap: break-word;
+                    .tag{
+                    padding-top:3rem;
+                    font-size: 4rem;
+                
+                 }
+            }
+      }
+}
+.com2{
+    // background-color: aquamarine;
+    .title {
+        color:black;
+        position: absolute;
+        width: 75px;
+        height: 60px;
+        left: 24px;
+        top: 24px;
+        font-size: 1.5rem;
+    }
+
+    @media all and (min-width:750px) {
+        /* Position and sizing of burger button */
+            .title {
+                position: absolute;
+                width: 300px;
+                height: 60px;
+                left: 36px;
+                top: 36px;
+                font-size: 2rem;
+            }
+        }
+        @media all and (max-width:750px) {
+      
+            .title {
+                position: absolute;
+                width: 75px;
+                height: 60px;
+                left: 24px;
+                top: 24px;
+                font-size: 1.5rem;
+            }
+      }
+}

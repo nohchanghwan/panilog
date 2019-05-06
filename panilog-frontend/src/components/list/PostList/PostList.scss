@@ -23,9 +23,9 @@
         
       }
       a:hover {
-        color: $oc-yellow-8;
+        color: #23A6D5;
         // 마우스 호버 시 밑줄(밑줄과 글자 사이 여백, 얇은 밑줄을 위해 border-bottom 사용)
-        border-bottom: 1px solid $oc-yellow-8;
+        //border-bottom: 1px solid $oc-yellow-8;
       }
     }
     .date {
@@ -35,10 +35,14 @@
     p {
       font-weight: 300;
       color: $oc-gray-7;
+      font-family: 'BBTreeGR';
+
     }
     .tags {
       font-size: 0.8rem;
-      color: $oc-gray-7;
+      font-family: 'BBTreeGR';
+      // color: $oc-gray-7;
+      color: #E73C7E;
       // word-wrap: normal; // 내용이 너무 길면 다음 줄에 작성
       
       a {
@@ -48,12 +52,13 @@
         padding-right: 8px;
         padding-top: 2px;
         padding-bottom: 2px;
-        border: 1px solid $oc-gray-4;
+        // border: 1px solid $oc-gray-4;
+        border: 1px solid #E73C7E;
         border-radius: 4px;
         background: white;
         &:hover, &:active {
-          color: $oc-yellow-8;
-          border: 1px solid $oc-yellow-8;
+          color: #23A6D5;
+          border: 1px solid #23A6D5;
           transition: all 0.15s ease-in; //시간차로 호버효과
         }
 

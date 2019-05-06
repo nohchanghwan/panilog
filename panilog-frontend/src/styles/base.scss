@@ -3,6 +3,7 @@
 @import url("//fonts.googleapis.com/css?family=Song+Myung"); /*Song Myung*/
 @import url("//fonts.googleapis.com/css?family=Nanum+Myeongjo"); /*Nanum Myeongjo*/
 @import url("//fonts.googleapis.com/css?family=Do+Hyeon"); /*Do Hyeon*/
+
 @import url("//fonts.googleapis.com/css?family=Gugi"); /*Gugi*/
 @import url("//cdn.jsdelivr.net/gh/velopert/font-d2coding@1.2.1/d2coding.css");
 @import url("//fonts.googleapis.com/css?family=Ubuntu");  /*'Ubuntu', sans-serif; */
@@ -10,6 +11,8 @@
 @font-face { font-family: 'silgothic'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/silgothic.woff') format('woff'); font-weight: normal; font-style: normal; }
 @font-face { font-family: 'NIXGONM-Vb'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/NIXGONM-Vb.woff') format('woff'); font-weight: normal; font-style: normal; }
 @font-face { font-family: 'BMHANNAAir'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.0/BMHANNAAir.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'BMHANNAPro'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.0/BMHANNAPro.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'BBTreeGR'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/BBTreeGR.woff') format('woff'); font-weight: normal; font-style: normal; }
 //네이버 
 @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css); /* NanumSquare */
 
@@ -17,7 +20,7 @@
 body {
   margin: 0;
   box-sizing: border-box;
-  font-family: "NanumSquare", sans-serif;
+  font-family: "BMHANNAPro", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

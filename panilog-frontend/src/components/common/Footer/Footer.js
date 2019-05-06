@@ -16,13 +16,15 @@ const Footer = () => (
   <footer className={cx('footer')}>
       <il className={cx('inline')}>
         <div  className={cx('icon')}>
-          <FontAwesomeIcon icon={['fab', 'trello']} spin/> 추진팀 트렐로       
+          <FontAwesomeIcon icon={['fab', 'trello']} />        
+          Trello &nbsp;
         </div>
         <div className={cx('icon2')}>
-          <FontAwesomeIcon icon={['fab', 'slack']} spin/> 센터 슬랙       
+          <FontAwesomeIcon icon={['fab', 'slack']} />       
+          Slack
         </div>
       </il>
-    <Link to="/" className={cx('brand')}>tech.blog</Link>
+    {/* <Link to="/" className={cx('brand')}>tech.blog</Link> */}
     <div className={cx('admin-login')}>관리자 로그인</div>
     <div className={cx('admin-login')}>Copyright ©KB Corp. All Rights Reserved.</div>
 

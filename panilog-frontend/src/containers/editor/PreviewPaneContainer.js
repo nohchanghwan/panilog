@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PreviewPane from 'components/editor/PreviewPane';
+import Preview from 'components/editor/Preview';
 
 class PreviewPaneContainer extends Component {
+
+
+
   render() {
     const { markdown, title } = this.props;
     return (

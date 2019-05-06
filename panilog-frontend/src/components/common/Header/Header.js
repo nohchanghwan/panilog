@@ -3,14 +3,20 @@ import styles from './Header.scss';
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 import Button from 'components/common/Button';
+// import Hamburgerbar from 'components/common/Hamburgerbar';
+// import { scaleRotate as Menu } from 'react-burger-menu'
+
 
 const cx = classNames.bind(styles);
 
 const Header = ({postId,onRemove}) => (
+  
   <header className={cx('header')}>
     <div className={cx('header-content')}>
+
       <div className={cx('brand')}>
-        <Link to="/">Dev ing...</Link>
+      
+        <Link to="/"> 기술블로그</Link>
       </div>
       <div className={cx('right')}>
         {

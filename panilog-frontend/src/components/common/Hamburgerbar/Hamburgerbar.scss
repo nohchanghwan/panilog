@@ -1,0 +1,24 @@
+@import 'utils';
+.test{
+    width:1px;
+    font-size: 0%
+}
+.menu-custom {
+    
+    .title {
+    text-align: center;
+    font-size: 40px;
+    color: black;
+    }
+    a {
+        color:black;
+        padding-top: 10px;
+    }
+}
+@include media("<large") {
+
+    .menu-custom {
+      width:40%;
+
+    }
+  }

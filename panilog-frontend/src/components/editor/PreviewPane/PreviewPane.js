@@ -5,7 +5,9 @@ import MarkdownRender from 'components/common/MarkdownRender';
 
 const cx = classNames.bind(styles);
 
+
 const PreviewPane = ({markdown, title}) => (
+  
   <div className={cx('preview-pane')}>
     <h1 className={cx('title')}>
       {title}
@@ -14,6 +16,9 @@ const PreviewPane = ({markdown, title}) => (
       <MarkdownRender markdown={markdown}/>
     </div>
   </div>
+
 );
+
+
 
 export default PreviewPane;

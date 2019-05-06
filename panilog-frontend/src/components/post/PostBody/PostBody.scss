@@ -1,14 +1,18 @@
 @import 'utils';
 
 .post-body {
+  // transform: translateY(-3rem); 
+
+  font-family: 'BBTreeGR';
   .paper {
+    transform: translateY(-3rem); 
     padding: 2rem;
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
     background:white;
     @include material-shadow(4, 0.5);
     // 위로 3rem 이동시켜 주어 파란색 배경을 침범하게 합니다.
-    transform: translateY(-3rem); 
+    // transform: translateY(-87vh); 
     margin: 0 auto;
     min-height: 20rem;
 

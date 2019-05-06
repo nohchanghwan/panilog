@@ -1,5 +1,5 @@
 import React , {Component} from 'react';
-import Header from 'components/common/Header';
+import Header from 'components/common/Header2';
 import { withRouter } from 'react-router-dom';
 
 //삭제버튼으로인한 상태변화추가
